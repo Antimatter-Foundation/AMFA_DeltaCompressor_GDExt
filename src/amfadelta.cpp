@@ -4,7 +4,7 @@
 
 #include "amfadelta.h"
 #include <godot_cpp/core/class_db.hpp>
-#include <godot_cpp/variant/string.hpp>
+#include "delta.h"
 
 using namespace godot;
 
@@ -23,5 +23,15 @@ DeltaCompressor::~DeltaCompressor() {
 }
 
 PackedByteArray DeltaCompressor::diff(PackedByteArray old_data, PackedByteArray new_data) {
-    return PackedByteArray();
+    const char *old = reinterpret_cast<const char *>(old_data.ptr());
+    const char *new_ = reinterpret_cast<const char *>(new_data.ptr());
+    char *delta;
+    delta_create(old, sizeof(old), new_, sizeof(new_), delta);
+    PackedByteArray output;
+    output.resize(sizeof(delta));
+    for (int i = 0; i < sizeof(delta); i++){
+        output[i] = delta[i];
+    }
+
+    return output;
 }
