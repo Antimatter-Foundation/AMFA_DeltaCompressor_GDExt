@@ -10,11 +10,11 @@
 namespace godot {
     class DeltaCompressor : public RefCounted {
         GDCLASS(DeltaCompressor, RefCounted)
-    protected:
-        static void _bind_methods();
-    public:
-        DeltaCompressor();
-        ~DeltaCompressor();
+        protected:
+            static void _bind_methods();
+        public:
+            DeltaCompressor();
+            ~DeltaCompressor();
     };
 }
 

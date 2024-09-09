@@ -4,10 +4,12 @@
 
 #include "amfadelta.h"
 #include <godot_cpp/core/class_db.hpp>
+#include <godot_cpp/variant/string.hpp>
 
 using namespace godot;
 
 void DeltaCompressor::_bind_methods() {
+    ClassDB::bind_method(D_METHOD("get_version"), &DeltaCompressor::get_version);
 }
 
 DeltaCompressor::DeltaCompressor() {

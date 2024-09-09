@@ -1,6 +1,6 @@
 [configuration]
 
-entry_symbol = "example_library_init"
+entry_symbol = "libinit"
 compatibility_minimum = "4.3"
 reloadable = true
 

@@ -4,7 +4,7 @@
 script/source = "extends Node
 
 func _ready() -> void:
-	print(DeltaCompressor)
+	print(DeltaCompressor.get_version())
 "
 
 [node name="Node" type="Node"]

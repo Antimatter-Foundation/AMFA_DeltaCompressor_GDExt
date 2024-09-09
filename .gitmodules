@@ -1,3 +1,6 @@
 [submodule "godot-cpp"]
 	path = godot-cpp
 	url = https://github.com/godotengine/godot-cpp
+[submodule "zdelta"]
+	path = zdelta
+	url = https://github.com/snej/zdelta
