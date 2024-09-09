@@ -5,16 +5,18 @@
 #ifndef AMFA_DELTACOMPRESSOR_GDEXT_AMFADELTA_H
 #define AMFA_DELTACOMPRESSOR_GDEXT_AMFADELTA_H
 
-#include <core/object.hpp>
+#include <godot_cpp/classes/ref_counted.hpp>
 
-class DeltaCompressor : public RefCounted {
-    GDCLASS(DeltaCompressor, RefCounted)
-protected:
-    static void _bind_methods();
-public:
-    String get_version();
+namespace godot {
+    class DeltaCompressor : public RefCounted {
+        GDCLASS(DeltaCompressor, RefCounted)
+    protected:
+        static void _bind_methods();
+    public:
+        DeltaCompressor();
+        ~DeltaCompressor();
+    };
+}
 
-    DeltaCompressor();
-};
 
 #endif //AMFA_DELTACOMPRESSOR_GDEXT_AMFADELTA_H
