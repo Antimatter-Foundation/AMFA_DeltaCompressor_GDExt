@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+/src/amfadelta.os
+/src/register_types.os
+
+/.idea
