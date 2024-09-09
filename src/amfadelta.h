@@ -15,6 +15,7 @@ namespace godot {
         public:
             DeltaCompressor();
             ~DeltaCompressor();
+            PackedByteArray diff(PackedByteArray old_data, PackedByteArray new_data);
     };
 }
 
