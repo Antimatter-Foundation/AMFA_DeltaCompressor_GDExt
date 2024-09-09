@@ -34,3 +34,4 @@
 /src/register_types.os
 
 /.idea
+./.sconsign.dblite
